@@ -55,7 +55,7 @@ public class PostController {
         PostDto postResponse = postService.updatePost(postDto,id);
         return new ResponseEntity<>(postResponse,HttpStatus.OK);
     }
-    //admin has permision to dlt the post
+    //admin has permission to dlt the post
     @PreAuthorize("hasRole('Admin')")
     @DeleteMapping("/{id}")
     public  ResponseEntity<String> deletePostById(@PathVariable (name = "id") long id){
