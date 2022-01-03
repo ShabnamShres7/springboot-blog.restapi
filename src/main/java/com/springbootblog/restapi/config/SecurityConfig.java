@@ -30,6 +30,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private CustomUserDetailsService userDetailsService;
 
+    //Injecting  authenticationEntryPoint
+
     @Autowired
     private JwtAuthenticationEntryPoint authenticationEntryPoint;
 
